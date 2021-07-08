@@ -286,7 +286,7 @@ const  im1=new image(
         category:"Laptop",
         price:499,
         color:"grey",
-        path:"./images/i1.jpeg",
+        path:"https://www.dropbox.com/preview/images/i1.jpeg?role=personal",
         brand:"Apple"
     });
 
@@ -297,7 +297,7 @@ const  im2=new image(
             category:"Laptop",
             price:499,
             color:"blurr-white",
-            path:"./images/i2.jpeg",
+            path:"https://www.dropbox.com/preview/images/i2.jpeg?role=personal",
             brand:"Apple"
         })
 
@@ -308,7 +308,7 @@ const  im3=new image(
                 category:"Laptop",
                 price:499,
                 color:"Golden",
-                path:"./images/i3.jpeg",
+                path:".https://www.dropbox.com/preview/images/i3.jpeg?role=personal",
                 brand:"Apple"
             })
 const  im4=new image(
@@ -319,7 +319,7 @@ const  im4=new image(
                 category:"Mobile",
                 price:499,
                 color:"Black",
-                path:"./images/i4.jpeg",
+                path:"https://www.dropbox.com/preview/images/i4.jpeg?role=personal",
                 brand:"Apple"
 })
 
@@ -330,7 +330,7 @@ const  im5=new image(
                         category:"Mobile",
                         price:499,
                         color:"White",
-                        path:"./images/i5.jpeg",
+                        path:"https://www.dropbox.com/preview/images/i5.jpeg?role=personal",
                         brand:"Apple"
  })
 
@@ -341,10 +341,9 @@ const  im5=new image(
                 category:"Ipad",
                 price:499,
                 color:"Black",
-                path:"./images/i6.jpeg",
+                path:"https://www.dropbox.com/preview/images/i6.jpeg?role=personal",
                 brand:"Apple"
  })
-
 const  im7=new image(
     {
 
@@ -353,7 +352,7 @@ const  im7=new image(
         category:"Watch",
         price:499,
         color:"Black",
-        path:"./images/i7.jpeg",
+        path:"https://www.dropbox.com/preview/images/i7.jpeg?role=personal",
         brand:"Apple"
     })                  
 
@@ -364,7 +363,7 @@ const  im7=new image(
             category:"Electronic",
             price:22,
             color:"Blue",
-            path:"./images/i8.jpeg",
+            path:"https://www.dropbox.com/preview/images/i8.jpeg?role=personal",
             // brand:
         })
 
@@ -376,5 +375,6 @@ image.insertMany([im1,im2,im3,im4,im5,im6,im7,im8],function(err,result){
   else
   console.log(result)
 });
+
 
 
