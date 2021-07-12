@@ -1,0 +1,25 @@
+.one{
+    color: #FF69B4;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    font-size: 35px;
+    margin-top: 30px;
+    font-weight: bolder;
+}
+#i{
+    font-weight: normal;
+}
+
+.head1{
+    font-family: math;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 380px;
+    text-transform: uppercase;
+    margin-right: 380px;
+    margin-top: 10px;
+    justify-content: space-evenly;
+    font-size: 15px;
+
+}

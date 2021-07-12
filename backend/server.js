@@ -3,18 +3,18 @@ const url="mongodb://127.0.0.1:27017/Ecommercedbs";
 const express = require('express');
 const { request } = require('http');
 var mongo = require('mongodb');
+//const { assert } = require('console');
+let cors = require("cors");
 var assert = require('assert');
 const app=express();
-let cors = require("cors");
-app.use(cors());
 const PORT =3001;
+app.use(cors());
 mongoose.connect(url,
     { useNewUrlParser: true , useUnifiedTopology: true },function(err,connection){
     if(err) console.log(err)
     else
     console.log("connection successful")
 })
-
 const Image=mongoose.Schema({
     item:String,
       category:String,
@@ -23,95 +23,79 @@ const Image=mongoose.Schema({
        path:String,
        brand:String
 })
-const image=mongoose.model("products",Image);
-
-app.get("/",(request,response)=>{
-   image.find((err,result)=>{
-        if(err) console.log(err)
-        else{
-             console.log(result)
-             response.send(result)
-        }
-    })
-})
-
-
-const Image2=mongoose.Schema({
-    item:String,
-})
-const image2=mongoose.model("accs",Image2);
-app.get("/home",(request,response)=>{
-  
-  image2.find((err,result)=>{
-      if(err) console.log(err)
-      else{
-           console.log(result)
-           response.send(result)
-      }
-  })
-})
-
-const Image3=mongoose.Schema({
-    item:String,
-})
-const image3=mongoose.model("stores",Image3);
-app.get("/stores",(request,response)=>{
-  
-  image3.find((err,result)=>{
-      if(err) console.log(err)
-      else{
-           console.log(result)
-           response.send(result)
-      }
-  })
-})
-
-
-
-  
- 
-
+const image=mongoose.model("Product",Image);
 const Image6=mongoose.Schema({
     item:String,
 })
-
 const image6=mongoose.model("bests",Image6);
-app.get("/bests",(request,response)=>{
-  
-  
-  image6.find((err,result)=>{
-      if(err) console.log(err)
-      else{
-           console.log(result)
-           response.send(result)
-      }
-  })
+const Accessories_page2=mongoose.Schema({
+    item:String
+})
+const acc=mongoose.model("Acc",Accessories_page2);
+
+const Stores=mongoose.Schema({
+    item:String
+})
+const Menus=mongoose.Schema({
+    item:String
 })
 
-
-const Image7=mongoose.Schema({
-    item:String,
-})
-
-
-const image7=mongoose.model("menus",Image7);
-app.get("/menus",(request,response)=>{
-  
-  image2.find((err,result)=>{
-      if(err) console.log(err)
-      else{
-           console.log(result)
-           response.send(result)
-      }
-  })
-})
-
+const menu=mongoose.model("Menu",Menus);
+const store=mongoose.model("store",Stores);
+app.get("/products",(request,response)=>{
+   
     
+    image.find((err,result)=>{
+        if(err) console.log(err)
+        else{
+             console.log(result)
+             response.json(result)
+        }
+    }).pretty
+})
+app.get("/home",(request,response)=>{
+  
+    menu.find((err,result)=>{
+        if(err) console.log(err)
+        else{
+             console.log(result)
+             response.json(result)
+        }
+    })
+  })
+ 
+  app.get("/stores",(request,response)=>{
+    
+    store.find((err,result)=>{
+        if(err) console.log(err)
+        else{
+             console.log(result)
+             response.json(result)
+        }
+    })
+  })
+  
+  app.get("/accs",(request,response)=>{
+    
+    acc.find((err,result)=>{
+        if(err) console.log(err)
+        else{
+             console.log(result)
+             response.json(result)
+        }
+    })
+  })
   
   
-
-  
-  
+  app.get("/bests",(request,response)=>{
+    image6.find((err,result)=>{
+        if(err) console.log(err)
+        else{
+             console.log(result)
+             response.json(result)
+        }
+    })
+  })
 app.listen(PORT,()=>{
     console.log("server is running")
 })
