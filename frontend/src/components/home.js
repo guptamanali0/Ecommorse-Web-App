@@ -2,73 +2,84 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './../styles/index.css'
 import image1 from './../images/i1.jpeg'
-import Store from './store.js'
-
-
- 
-
 class Home extends Component{
-    
-  
-
     state={
-         courselist:[],
-         responseOne:[],
-         responseTwo:[],
-        responesThree:[], 
-        responesFour:[], 
-        flag:false   
+        menu:[],
+        product:[],
+        best:[],
+        store:[]
       }
-
-      handleclick=()=>{
-        this.setState({
-            flag:true
-        })
-          //  alert("Cllickc")
-      }
-
-     
-      
       componentDidMount() {
-        const one=("http://localhost:3001/home")
-        const two=("http://localhost:3001/stores")
-        const three=("http://localhost:3001/bests")
-        const four=("http://localhost:3001/products")
+         //axios.get("http://localhost:3001/home")
+         let one ="http://localhost:3001/home";
+        let two="http://localhost:3001/stores";
+        let three="http://localhost:3001/bests";
+        let four="http://localhost:3001/fbest";
 
+    const requestOne = axios.get(one);
+    const requestTwo = axios.get(two);
+    const requestThree = axios.get(three);
+    const requestTfour = axios.get(four);
+    axios.all([requestOne, requestTwo, requestThree,requestTfour])
+    .then(
+    axios.spread((...responses) => {
+        const responseOne = responses[0].data;
+        const responseTwo = responses[1].data;
+        const responesThree = responses[2].data;
+        const responesfour = responses[3].data;
 
-        const requestOne = axios.get(one);
-     const requestTwo = axios.get(two);
-      const requestThree = axios.get(three);
-      const requestFour = axios.get(four);
+        console.log(responseOne, responseTwo, responesThree,responesfour)
 
-      axios.all([requestOne, requestTwo, requestThree,requestFour]).then(axios.spread((...responses) => {
-        this.setState({ 
-          responseOne : responses[0].data,
-          responseTwo : responses[1].data,
-         responesThree :   responses[2].data})
-        
-      
-      })).catch(errors => {
-        console.log(errors)
+        this.setState({
+           menu:responseOne,
+           store:responseTwo,
+           best:responesThree,
+           product:responesfour
+          })
       })
-        
+    )
+         .catch((error)=>
+           console.log(error+"rejgndrogmjd")    
+         
+         )
          console.log("fetching data")
      
        }
-       render(){
+       render(){    
         return (
           <>
-          {/* <div className="outer"> */}
+           {/* {this.state.menu.map((i)=>(
+               <div key={i.id}>
+                <h1>{i.item}</h1>
+               </div>
+           ))}
+              {this.state.store.map((i)=>(
+               <div key={i.id}>
+                <p>{i.item}</p>
+               </div>
+           ))}
+           
+            {this.state.best.map((i)=>(
+               <div key={i.id}>
+                <p>{i.item}</p>
+               </div>
+           ))}
+            {this.state.product.map((i)=>(
+               <div key={i.id}>
+                <img src={i.path}></img>
+               </div>
+           ))} */}
+               {/* <div className="outer"> */}
            <div className="one"><span id="i">i</span>SHOP</div>
 <div className="head1">
 {/* <img src={image1} /> */}
-           {this.state.responseOne.map((i)=>(
+           {this.state.menu.map((i)=>(
                <div key={i.id}>
-                 <div>{i.item}</div>
-                 {/* <button onClick={this.handleclick()}>{this.state.flag}?<Store />:null</button> */}
+                 <button className="btn">{i.item}</button>
                </div> 
 ))}
  </div>
+ 
 <hr id="line"></hr>
 <img src={image1} id="image1"/>
 <div className="both">
@@ -79,21 +90,34 @@ class Home extends Component{
 </div>
 
 <div className="head2">
-{this.state.responseTwo.map((i)=>(
+{this.state.store.map((i)=>(
                <div key={i.id}> 
-                 <div>{i.item}</div>
+                 <button className="btn">{i.item}</button>
                  {/* <button onClick={this.handleclick()}>{this.state.flag}?<Store />:null</button> */}
                </div> 
                
 ))}
 </div>
 </div>
-  <div id="best">BEST SELLER</div>
-
-
-
-
-
+<div>
+<h5 id="best">BEST SELLER</h5>
+</div> 
+<div className="seller">
+{this.state.best.map((i)=>(
+               <div key={i.id}>
+                <button className="btn">{i.item}</button>
+               </div>
+           ))}
+          </div>
+          <div className="pb">
+          {this.state.product.map((i)=>(
+               <div key={i.id}>
+                 <img src={i.path}></img>
+                <p>{i.item}</p>
+                <p>{i.price}</p>
+               </div>
+           ))}
+           </div>
            {/* </div> */}
            </>
         )}

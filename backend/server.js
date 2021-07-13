@@ -15,7 +15,7 @@ mongoose.connect(url,
     else
     console.log("connection successful")
 })
-const Image=mongoose.Schema({
+const Products=mongoose.Schema({
     item:String,
       category:String,
        price:Number,
@@ -23,39 +23,48 @@ const Image=mongoose.Schema({
        path:String,
        brand:String
 })
-const image=mongoose.model("Product",Image);
-const Image6=mongoose.Schema({
+const products=mongoose.model("products",Products);
+
+
+const Bests=mongoose.Schema({
     item:String,
 })
-const image6=mongoose.model("bests",Image6);
-const Accessories_page2=mongoose.Schema({
+const bests=mongoose.model("bests",Bests);
+
+
+const Accstwo=mongoose.Schema({
     item:String
 })
-const acc=mongoose.model("Acc",Accessories_page2);
+const acc=mongoose.model("acc",Accstwo);
+
 
 const Stores=mongoose.Schema({
     item:String
 })
+const stores=mongoose.model("stores",Stores);
+
 const Menus=mongoose.Schema({
     item:String
 })
+const menus=mongoose.model("menus",Menus);
 
-const menu=mongoose.model("Menu",Menus);
-const store=mongoose.model("store",Stores);
+
+
 app.get("/products",(request,response)=>{
    
     
-    image.find((err,result)=>{
+    products.find((err,result)=>{
         if(err) console.log(err)
         else{
              console.log(result)
              response.json(result)
         }
-    }).pretty
+    })
 })
+
 app.get("/home",(request,response)=>{
   
-    menu.find((err,result)=>{
+    menus.find((err,result)=>{
         if(err) console.log(err)
         else{
              console.log(result)
@@ -66,7 +75,7 @@ app.get("/home",(request,response)=>{
  
   app.get("/stores",(request,response)=>{
     
-    store.find((err,result)=>{
+    stores.find((err,result)=>{
         if(err) console.log(err)
         else{
              console.log(result)
@@ -86,9 +95,9 @@ app.get("/home",(request,response)=>{
     })
   })
   
-  
-  app.get("/bests",(request,response)=>{
-    image6.find((err,result)=>{
+app.get("/bests",(request,response)=>{
+
+    bests.find((err,result)=>{
         if(err) console.log(err)
         else{
              console.log(result)
@@ -96,6 +105,18 @@ app.get("/home",(request,response)=>{
         }
     })
   })
+
+  app.get("/fbest",(request,response)=>{
+    
+    products.find({best:"true"},(err,result)=>{
+        if(err) console.log(err)
+        else{
+             console.log(result)
+             response.json(result)
+        }
+    })
+  })
+
 app.listen(PORT,()=>{
     console.log("server is running")
 })
