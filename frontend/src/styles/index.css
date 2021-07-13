@@ -1,3 +1,6 @@
+body{
+    overflow-x: hidden;
+}
 .outer{
     width: 80%;
     margin-left: 100px;
@@ -31,19 +34,33 @@
 
 }
 .pb{
+    
     display: grid;
     position: relative;
-    left: 25%;
+    left: 10%;
     bottom: 170px;
-    width: 70px;
-    grid-template-rows: (2,1000px);
+    width: 1070px;
+    height:700px;
+    column-gap: 20px;
+    row-gap: 30px;
     grid-template-columns: repeat(4,250px);
+    grid-template-rows: repeat(2,320px);
+    /* background-color: yellow; */
+}
+
+#one{
+    width: 230px;
+    height: 90%;
+    background-color: #FF69B4;
+    border: 1px solid gray;
+
 }
 #image1{
     margin-top: 5px;
     /* margin-left: 160px; */
     width: 1480px;
     height: 400px;
+    /* position: ; */
 }
 .btn{
     background-color: Transparent;
@@ -67,7 +84,7 @@
    display: flex;
    justify-content: center;
    position: relative;
-   bottom:170px;
+   bottom:195px;
 }
 
 .head2{
@@ -100,3 +117,159 @@
     width: 900px;
     border-color: lightgray;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#eight{
+    background-color: #FFFFFF;
+    width: 250px;
+    height: 330px;
+    border: 1px solid lightgray;
+    margin-top: 35px;
+    align-self: center;
+    border-radius: 2%;
+}
+
+
+#eleven{
+    margin-left:8px;
+    margin-top: 8px;
+    background-color: #c00000;
+    color: white;
+    }
+
+    #nine{
+        width: 160px;
+        height: 160px;
+        margin: auto;
+        margin-top: 12px;
+        margin-left: 25px;
+    }
+
+    #ten{
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    #thirteen{
+        color: red;
+    }
+    #fourteen{
+        color: gray;
+    }
+
+    #sixteen{
+        color: white;
+        margin-left: 20px;
+        font-size: 18px;
+        font-weight: lighter;
+        margin-top: 25px;
+    }
+
+    .six{
+        display: flex;
+        justify-content: center;
+        text-indent: 8px;
+        align-items: center;
+        margin-top: 10px;
+    }
+    #more{
+        width: 1350px;
+        display: flex;
+        justify-content: center;
+        /* background-color: burlywood; */
+       position: relative;
+       bottom: 120px;
+    }
+
+    #image2{
+        width: 1350px;
+        position: relative;
+        bottom: 125px;
+    }
+
+    .base{
+        display: flex;
+    }
+.scroll{
+    width: 280px;
+    height: 180px;
+    color: black;
+    border: 1px solid lightgray;
+    background-color: whitesmoke;
+    border-radius: 1%;
+}
+
+
+#gridimage{
+    width: 100px;
+    height: 80px;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+#tene{
+    position: relative;
+    left: 130px;
+    bottom: 80px;
+}
+.sixp{
+        display: flex;
+        justify-content: center;
+        text-indent: 8px;
+        align-items: center;
+        margin-top: 10px;
+        position: relative;
+        bottom: 90px;
+        left: 30px;
+}
+
+.twitter{
+    display: flex;
+    width: 10%;
+    height: 20px;
+    position: relative;
+    left: 560px;
+}
+#twit2{
+    margin-left: 28px;
+}
+#image3{
+    width: 1350px;
+    position: relative;
+    /* bottom: 125px;    */
+}
+
+.last{
+    margin-left: 150px;
+    margin-right:1rem;
+    border-top: 1px solid lightgray;
+    margin-top: 30px;
+    width: 75%;
+    height: 120px;
+    /* background-color: #c00000; */
+}
+

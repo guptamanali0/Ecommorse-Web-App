@@ -31,6 +31,11 @@ const Bests=mongoose.Schema({
 })
 const bests=mongoose.model("bests",Bests);
 
+const Readmes=mongoose.Schema({
+    item:String,
+})
+const readme=mongoose.model("readme",Readmes);
+
 
 const Accstwo=mongoose.Schema({
     item:String
@@ -47,6 +52,24 @@ const Menus=mongoose.Schema({
     item:String
 })
 const menus=mongoose.model("menus",Menus);
+
+const Services=mongoose.Schema({
+    item:String,
+   
+})
+const servi=mongoose.model("service",Services);
+
+app.get("/services",(request,response)=>{
+   
+    
+    servi.find((err,result)=>{
+        if(err) console.log(err)
+        else{
+             console.log(result)
+             response.json(result)
+        }
+    })
+})
 
 
 
@@ -109,6 +132,17 @@ app.get("/bests",(request,response)=>{
   app.get("/fbest",(request,response)=>{
     
     products.find({best:"true"},(err,result)=>{
+        if(err) console.log(err)
+        else{
+             console.log(result)
+             response.json(result)
+        }
+    })
+  })
+
+  app.get("/readme",(request,response)=>{
+
+    readme.find((err,result)=>{
         if(err) console.log(err)
         else{
              console.log(result)

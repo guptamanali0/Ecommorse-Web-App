@@ -8,19 +8,33 @@ mongoose.connect(url,
     console.log("connection successful")
 })
 
-const Menus=mongoose.Schema({
+const Services=mongoose.Schema({
        item:String,
       
 })
-const menu=mongoose.model("menu",Menus);
-const  menu6=new menu(
+const servi=mongoose.model("service",Services);
+const  servi1=new servi(
    {
 
-       item:"Accessories",
+       item:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus malolor has been industry standard durnamy"
    });
 
 
-menu.insertOne([menu6],function(err,result){
+   const  servi2=new servi(
+    {
+ 
+        item:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus malolor has been industry standard durnamy"
+    });
+
+    
+    const  servi3=new servi(
+        {
+     
+            item:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus malolor has been industry standard durnamy"
+        });
+     
+
+servi.insertMany([servi1,servi2,servi3],function(err,result){
  if(err) throw err;
  else
  console.log(result)
