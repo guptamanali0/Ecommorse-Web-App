@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Carousel from 'react-elastic-carousel'
 import "react-multi-carousel/lib/styles.css";
+import { Link, NavLink } from 'react-router-dom';
 
-import Whirligig from 'react-whirligig'
 import './../styles/index.css'
 import image1 from './../images/i1.jpeg'
 import image2 from './../images/i2.png'
@@ -12,6 +12,11 @@ import image4 from './../images/i4.png'
 import image5 from './../images/i5.png'
 import image6 from './../images/i6.png'
 import image7 from './../images/i7.jpg'
+import image8 from './../images/i8.png'
+import image9 from './../images/i9.png'
+import image10 from './../images/i10.png'
+import image11 from './../images/i11.png'
+import image12 from './../images/ishop.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
 class Home extends Component{
     state={
@@ -22,7 +27,6 @@ class Home extends Component{
         readme:[]
       }
       componentDidMount() {
-         //axios.get("http://localhost:3001/home")
          let one ="http://localhost:3001/home";
         let two="http://localhost:3001/stores";
         let three="http://localhost:3001/bests";
@@ -61,11 +65,6 @@ class Home extends Component{
      
        }
 
-       Slider = () => {
-        let whirligig
-        const next = () => whirligig.next()
-        const prev = () => whirligig.prev()
-       }
       
        render(){    
         return (
@@ -73,11 +72,11 @@ class Home extends Component{
            
            
       
-           <div className="one"><span id="i">i</span>SHOP</div>
+  <div className="one"><img src={image12}/></div>
 <div className="head1">
-           {this.state.menu.map((i)=>(
-               <div key={i.id}>
-                 <button className="btn">{i.item}</button>
+      {this.state.menu.map((i)=>(
+          <div key={i.id}>
+                 <NavLink  id="link"  to="/sell">{i.item}</NavLink>
                </div> 
 ))}
  </div>
@@ -162,12 +161,23 @@ class Home extends Component{
 <div>
   <img src={image5} id="image5" />
 </div> 
+<Link to="/sell">
 <div className="twitter">
 <img src={image6}/>
 <img src={image7}  id="twit2"/>
 </div>
+</Link>
 
 <div className="last">
+     <div>Information</div>
+     <div>Service</div>
+     <div>Extras</div>
+     <div>My Account</div>
+     <div>Useful Links</div>
+     <div>Our Offers</div>
+</div>
+
+<div className="lastone">
 {this.state.readme.map((i)=>(
                <div key={i.id}> 
                  <button className="btn">{i.item}</button>
@@ -176,7 +186,14 @@ class Home extends Component{
               
 ))}
  </div>
+<hr></hr>
 
+<div className="account">
+  <img src={image10} />
+  <img src={image9} />
+  <img src={image11} />
+  <img src={image8} />
+</div>
 
 
 
