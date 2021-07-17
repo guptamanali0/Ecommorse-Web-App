@@ -183,12 +183,12 @@ mongoose.connect(url,
 // const acc=mongoose.model("acc",Accstwo);
 // const  acc1=new acc(
 //     {
-//         item:"Airport&wireless"
+//         item:"Apple Car"
 //     }
 // );
 // const  acc2=new acc(
 //     {
-//         item:"AppleCare"
+//         item:"Airport & Wirless"
 //     }
 // );
 // const  acc3=new acc(
@@ -198,7 +198,7 @@ mongoose.connect(url,
 // );
 // const  acc4=new acc(
 //     {
-//         item:"Connected Home"
+//         item:"Cases & Films"
 //     }
 // );
 // const  acc5=new acc(
@@ -208,12 +208,12 @@ mongoose.connect(url,
 // );
 // const  acc6=new acc(
 //     {
-//         item:"Headphones"
+//         item:"Connected Home"
 //     }
 // );
 // const  acc7=new acc(
 //     {
-//         item:"Cases & Films"
+//         item:"Headphones"
 //     }
 // );
 
@@ -270,362 +270,412 @@ mongoose.connect(url,
 
 
 
-//  const Products=mongoose.Schema({
-//      item:String,
-//        category:String,
-//         price:Number,
-//         color:String,
-//         path:String,
-//         brand:String,
-//         best:String,
-//         oldprice:Number,
-//  })
-// const products=mongoose.model("products",Products);
-// //const Car = mongoose.model("CarName",carSchema);
-// const  pro1=new products(
-//     {
 
-//         item:"Apple Macbook Pro",
-//         category:"Laptop",
-//         price:499,
-//         color:"grey",
-//         path:"https://i.ibb.co/Mf5rd5g/img1.png",
-//         brand:"Apple",
-//         best:"true",
-//         oldprice:5599
-//     });
 
-// const  pro2=new products(
-//         {
-    
-//             item:"Apple Mackbook Pro",
-//             category:"Laptop",
-//             price:499,
-//             color:"blurr-white",
-//             path:"https://i.ibb.co/s6RP8Yw/img2.png",
-//             brand:"Apple",
-//             best:"true",
-//             oldprice:5599
-//         })
 
-// const  pro3=new products(
-//             {
-        
-//                 item:"Apple Mackbook Air",
-//                 category:"Laptop",
-//                 price:499,
-//                 color:"Golden",
-//                 path:"https://i.ibb.co/kQCkBvk/img3.png",
-//                 brand:"Apple",
-//                 best:"true",
-//                 oldprice:5599
-//             })
-// const  pro4=new products(
-//                 {
-            
-                   
-//                 item:"Apple Iphone 11",
-//                 category:"Mobile",
-//                 price:499,
-//                 color:"Black",
-//                 path:"https://i.ibb.co/fSb66SF/img4.png",
-//                 brand:"Apple",
-//                 best:"true",
-//                 oldprice:5599
+
+
+
+
+
+
+
+// const read=mongoose.Schema({
+//     item:String
 // })
+// re=mongoose.model("readme",read);
 
-// const  pro5=new products(
-//                     {
-                
-//                         item:"Apple Mackbook Air",
-//                         category:"Mobile",
-//                         price:499,
-//                         color:"White",
-//                         path:"https://i.ibb.co/0rQ85W4/img5.png",
-//                         brand:"Apple",
-//                         best:"true",
-//                         oldprice:5599
-//  })
-
-//  const  pro6=new products(
-//                         {
-                    
-//                 item:"Apple Ipad",
-//                 category:"Ipad",
-//                 price:499,
-//                 color:"Black",
-//                 path:"https://i.ibb.co/gFKHK1K/img6.png",
-//                 brand:"Apple",
-//                 best:"true",
-//                 oldprice:5599
-//  })
-// const  pro7=new products(
-//     {
-
-     
-//         item:"Apple Watch 21.1",
-//         category:"Watch",
-//         price:499,
-//         color:"Black",
-//         path:"https://i.ibb.co/x5KWLxN/img7.png",
-//         brand:"Apple",
-//         best:"true",
-//         oldprice:5599
-//     })                  
-
-//     const  pro8=new products(
+// const im1 =new re(
 //         {
-    
-//             item:"Apple Ipad 2A",
-//             category:"Electronic",
-//             price:22,
-//             color:"Blue",
-//             path:"https://i.ibb.co/rygmVBS/img8.png",
-//             brand:"Apple",
-//         best:"true",
-//         oldprice:5599
-//         })
-
-
-
-
-
-//         const  pro9=new products(
+//             item:"About Us"
+//         });
+// const im2 =new re(
 //             {
-         
-//                 item:"New Apple Mac mini ",
-//                 category:"Macbook",
-//                 price:499,
-//                 color:"white",
-//                 path:"https://i.ibb.co/F4fLmYh/img9.png",
-//                 brand:"Apple",
-//                 best:"true",
-//                 oldprice:5599
+//                 item:"About Us"
 //             });
-         
-//          const  pro10=new products(
+// const im3 =new re(
 //                 {
-            
-//                     item:"Apple Smartwatch magic",
-//                     category:"Wireless & Air ports",
-//                     price:499,
-//                     color:"Golden",
-//                     path:"https://i.ibb.co/jrTvLHH/img10.png",
-//                     brand:"Apple",
-//                     best:"false",
-//                     oldprice:5599
-//                 })
-         
-//          const  pro11=new products(
+//                     item:"About Us"
+//                 });
+// const im4 =new re(
 //                     {
-                
-//                         item:"Apple Airpods",
-//                         category:"Wireless & Air ports",
-//                         price:499,
-//                         color:"White",
-//                         path:"https://i.ibb.co/R41zf6P/img11.png",
-//                         brand:"Apple",
-//                         best:"false",
-//                         oldprice:5599
-//                     })
-//          const  pro12=new products(
-//                         {
-                           
-//                         item:"Apple Carger",
-//                         category:"Charging devices",
-//                         price:499,
-//                         color:"Black",
-//                         path:"https://i.ibb.co/bBDNpXh/img12.png",
-//                         brand:"Apple",
-//                         best:"false",
-//                         oldprice:5599
-//          })
-         
-//          const  pro13=new products(
-//                             {
-                        
-//                                 item:"Apple Magic trackpad 2",
-//                                 category:"Mobile",
-//                                 price:499,
-//                                 color:"Cases & Films",
-//                                 path:"https://i.ibb.co/44wGPSx/img13.png",
-//                                 brand:"Apple",
-//                                 best:"false",
-//                                 oldprice:5599
-//          })
-         
-//          const  pro14=new products(
-//                              {
-//                         item:"Iphone lightning Dock",
-//                         category:"Iphone",
-//                         price:499,
-//                         color:"Gold",
-//                         path:"https://i.ibb.co/s6H86Mf/img14.png",
-//                         brand:"Apple",
-//                         best:"false",
-//                         oldprice:5599
-//          })
-//          const  pro15=new products(
-//             {
-             
-//                 item:"Apple Camera",
-//                 category:"Apple Car",
-//                 price:499,
-//                 color:"Black",
-//                 path:"https://i.ibb.co/TWLc9B7/img15.png",
-//                 brand:"Apple",
-//                 best:"false",
-//                 oldprice:5599
-//             })                  
-         
-//             const  pro16=new products(
-//                 {
-            
-//                     item:"Apple Airpods max",
-//                     category:"Wireless & Air ports",
-//                     price:499,
-//                     color:"White",
-//                     path:"https://i.ibb.co/WvhG5LN/img16.png",
-//                     brand:"Apple",
-//                 best:"false",
-//                 oldprice:5599
-//                 })
-         
-//                 const  pro17=new products(
-//                  {
-             
-//                      item:"Apple Homepod mini",
-//                      category:"Wireless & Air ports",
-//                      price:499,
-//                      color:"White",
-//                      path:"https://i.ibb.co/vvSMv65/img17.png",
-//                      brand:"Apple",
-//                      best:"false",
-//                      oldprice:5599
-//                  })
-         
-//                  const  pro18=new products(
-//                      {
-                 
-//                          item:"Apple Homepod mini",
-//                          category:"Air ports & Wireless",
-//                          price:499,
-//                          color:"Black",
-//                          path:"https://i.ibb.co/j9Xp1F4/img18.png",
-//                          brand:"Apple",
-//                        best:"false",
-//                        oldprice:5599
-//                      })
-// products.insertMany([pro1,pro2,pro3,pro4,pro5,pro6,pro7,pro8,pro9,pro10,pro11,pro12,pro13,pro14,pro15,pro16,pro17,pro18],function(err,result){
-//   if(err) throw err;
-//   else
-//   console.log(result)
-// });
+//                         item:"About Us"
+//                     });
+
+// const im5 =new re(
+//     {
+//         item:"About Us"
+//     });              
+// const im6 =new re(
+//     {
+//         item:"About Us"
+//     });                    
+// const im7 =new re(
+//     {
+//         item:"Information"
+//     });     
+// const im8 =new re(
+//  {
+//     item:"Information"
+//  });
+// const im9 =new re(
+// {
+// item:"Information"
+//  });               
+// const im10 =new re(
+//     {
+//         item:"Information"
+//     });                                        
+//     const im11 =new re(
+//         {
+//             item:"Information"
+//         });                                          
+//  const im12 =new re(
+// {
+// item:"Information"
+// });                                             
+// const im13 =new re(
+//     {
+//         item:"Privacy Policy"
+// });                                                    
+// const im14 =new re(
+//     {
+//         item:"Privacy Policy"
+// });                                                       
+// const im15 =new re(
+//     {
+//         item:"Privacy Policy"
+// });                                                          
+// const im16 =new re(
+//     {
+//         item:"Privacy Policy"
+// }); 
+// const im17 =new re(
+//     {
+//         item:"Privacy Policy"
+// }); 
+// const im18 =new re(
+//     {
+//         item:"Privacy Policy"
+// });                                                           
+// const im19 =new re(
+//     {
+//         item:"Terms & Conditions"
+// }); 
+// const im20 =new re(
+//     {
+//         item:"Terms & Conditions"
+// }); 
+// const im21 =new re(
+//     {
+//         item:"Terms & Conditions"
+// }); 
+// const im22 =new re(
+//     {
+//         item:"Terms & Conditions"
+// }); 
+// const im23 =new re(
+//     {
+//         item:"Terms & Conditions"
+// }); 
+// const im24 =new re(
+//     {
+//         item:"Terms & Conditions"
+// }); 
+
+// re.insertMany([im1,im2,im3,im4,im5,im6,im7,im8,im9,im10,im11,im12,im13,im14,im15,im16,im17,im18,im19,im20,im21,im22,im23,im24],function(err,result){
+//         if(err) throw err;
+//         else
+//         console.log(result)
+//        });
 
 
 
 
-
-
-
-
-const read=mongoose.Schema({
-    item:String
+const Image=mongoose.Schema({
+    item:String,
+      category:String,
+       price:Number,
+       color:String,
+       path:String,
+       brand:String,
+       best:String
 })
-re=mongoose.model("readme",read);
-const im1=new re(
+const image=mongoose.model("Product",Image);
+//const Car = mongoose.model("CarName",carSchema);
+    const  im1=new image(
     {
-        item:"Information"
-    });
-const im2=new re(
-{
-    item:"Service"
-});
-const im3=new re(
-{
-    item:"Extra"
-});
-const im4=new re(
-    {
-        item:"My Account"
+
+        item:"New Apple Mac mini ",
+        category:"Apple car",
+        price:499,
+        color:"white",
+        path:"https://i.ibb.co/F4fLmYh/img9.png",
+        brand:"Apple",
+        best:"true"
     });
 
-const im5=new re(
-        {
-            item:"Useful Links"
-        });
-const im6 =new re(
-    {
-        item:"Our offers"
-    });
-    const im7 =new re(
-        {
-            item:"About Us"
-        });
- const im8 =new re(
-            {
-                item:"Information"
-            });
-            const im9 =new re(
-                {
-                    item:"Privacy Policy"
-                });
-                const im10 =new re(
+const  im2=new image(
+       {
+   
+           item:"Apple Smartwatch magic",
+           category:"Air ports & Wireless",
+           price:499,
+           color:"Golden",
+           path:"https://i.ibb.co/jrTvLHH/img10.png",
+           brand:"Apple",
+           best:"true"
+       })
+
+const  im3=new image(
+           {
+       
+               item:"Apple Airpods",
+               category:"Cables & Docks",
+               price:499,
+               color:"White",
+               path:"https://i.ibb.co/R41zf6P/img11.png",
+               brand:"Apple",
+               best:"true"
+           })
+const  im4=new image(
+               {
+                  
+               item:"Apple Carger",
+               category:"Cases & Films",
+               price:499,
+               color:"Black",
+               path:"https://i.ibb.co/bBDNpXh/img12.png",
+               brand:"Apple",
+               best:"true"
+})
+
+const  im5=new image(
+                   {
+               
+                       item:"Apple Magic trackpad 2",
+                       category:"Charging Devices",
+                       price:499,
+                       color:"Cases & Films",
+                       path:"https://i.ibb.co/44wGPSx/img13.png",
+                       brand:"Apple",
+                       best:"true"
+})
+
+const  im6=new image(
                     {
-                        item:"Terms & Conditions"
-                    });
+                   
+               item:"Iphone lightning Dock",
+               category:"Connected Home",
+               price:499,
+               color:"Gold",
+               path:"https://i.ibb.co/s6H86Mf/img14.png",
+               brand:"Apple",
+               best:"true"
+})
+const  im7=new image(
+   {
+    
+       item:"Apple Camera",
+       category:"Headphones",
+       price:499,
+       color:"Black",
+       path:"https://i.ibb.co/TWLc9B7/img15.png",
+       brand:"Apple",
+       best:"true"
+   })                  
 
-                    const im11 =new re(
-                        {
-                            item:"About Us"
-                        });
-                        const im12 =new re(
+   const  im8=new image(
+       {
+   
+           item:"Apple Airpods max",
+           category:"Apple car",
+           price:499,
+           color:"White",
+           path:"https://i.ibb.co/WvhG5LN/img16.png",
+           brand:"Apple",
+       best:"true"
+       })
+
+       const  im9=new image(
+        {
+    
+            item:"Apple Homepod mini",
+            category:"Air port & Wireless",
+            price:499,
+            color:"White",
+            path:"https://i.ibb.co/vvSMv65/img17.png",
+            brand:"Apple",
+            best:"false"
+        })
+
+        const  im10=new image(
+            {
+        
+                item:"Apple Homepod mini",
+                category:"Cables & Docks",
+                price:499,
+                color:"Black",
+                path:"https://i.ibb.co/j9Xp1F4/img18.png",
+                brand:"Apple",
+              best:"false"
+            })
+
+            const  im11=new image(
+
+
+                           {
+                           
+                               item:"iphone-lightning-dock",
+                               category:"Cables & Docks",
+                               price:49,
+                               color:"pink",
+                               path:"https://i.ibb.co/ScRMJ32/iphone-lightning-dock.jpg",
+                               brand:"Apple",
+                               best:"false",
+                               oldprice:19
+                          }) 
+                          
+                          const  im12=new image(
                             {
-                                item:"Information"
-                            });
-                            const im13 =new re(
-                                {
-                                    item:"Privacy Policy"
-                                });
-                                const im14 =new re(
-                                    {
-                                        item:"Terms & Conditions"
-                                    });
-                                    const im15 =new re(
-                                        {
-                                            item:"About Us"
-                                        });
-                                        const im16 =new re(
-                                            {
-                                                item:"Information"
-                                            });
-                                            const im17 =new re(
-                                                {
-                                                    item:"Privacy Policy"
-                                                });
-                                                const im18 =new re(
-                                                    {
-                                                        item:"Terms & Conditions"
-                                                    });
-                                                    const im19 =new re(
-                                                        {
-                                                            item:"About us"
-                                                        });
-                                                        const im20 =new re(
-                                                            {
-                                                                item:"Information"
-                                                            });
-                                                            const im21 =new re(
-                                                                {
-                                                                    item:"Privacy Policy"
-                                                                });
-                                                            const im22 =new re(
-                                                                {
-                                                                    item:"Terms & Conditions"
-                                                                });
+                            item:"Headphone -567",
+                          category:"Headphones",
+                          price:399,
+                          color:"white",   
+                          path:"https://i.ibb.co/4f7bM59/High-End-Over-Ear-Headphones.jpg",                             
+                          brand:"Apple",
+                          best:"false",  
+                          oldprice:436                                  
+                          })
 
-re.insertMany([im1,im2,im3,im4,im5,im6,im7,im8,im9,im10,im11,im12,im13,im14,im15,im16,im17,im18,im19,im20,im21,im22],function(err,result){
-        if(err) throw err;
-        else
-        console.log(result)
-       });
+                          const  im13=new image(
+                            {
+                        
+                                item:"Apple Airpods",
+                                category:"Cables & Docks",
+                                price:499,
+                                color:"White",
+                                path:"https://i.ibb.co/R41zf6P/img11.png",
+                                brand:"Apple",
+                                best:"false"
+                            })
+                 const  im14=new image(
+                                {
+                                   
+                                item:"Apple Carger",
+                                category:"Cases & Films",
+                                price:499,
+                                color:"Black",
+                                path:"https://i.ibb.co/bBDNpXh/img12.png",
+                                brand:"Apple",
+                                best:"false"
+                 })
+                 
+                 const  im15=new image(
+                                    {
+                                
+                                        item:"Apple Magic trackpad 2",
+                                        category:"Charging Devices",
+                                        price:499,
+                                        color:"Cases & Films",
+                                        path:"https://i.ibb.co/44wGPSx/img13.png",
+                                        brand:"Apple",
+                                        best:"false"
+                 })
+                 
+                 const  im16=new image(
+                                     {
+                                    
+                                item:"Iphone lightning Dock",
+                                category:"Connected Home",
+                                price:499,
+                                color:"Gold",
+                                path:"https://i.ibb.co/s6H86Mf/img14.png",
+                                brand:"Apple",
+                                best:"false"
+                 })
+                 const  im17=new image(
+                    {
+                     
+                        item:"Apple Camera",
+                        category:"Headphones",
+                        price:499,
+                        color:"Black",
+                        path:"https://i.ibb.co/TWLc9B7/img15.png",
+                        brand:"Apple",
+                        best:"false"
+                    })                  
+                 
+                    const  im18=new image(
+                        {
+                    
+                            item:"Apple Airpods max",
+                            category:"Apple car",
+                            price:499,
+                            color:"White",
+                            path:"https://i.ibb.co/WvhG5LN/img16.png",
+                            brand:"Apple",
+                        best:"false"
+                        })
+                 
+                        const  im19=new image(
+                         {
+                     
+                             item:"Apple Homepod mini",
+                             category:"Air port & Wireless",
+                             price:499,
+                             color:"White",
+                             path:"https://i.ibb.co/vvSMv65/img17.png",
+                             brand:"Apple",
+                             best:"false"
+                         })
+                 
+                         const  im20=new image(
+                             {
+                         
+                                 item:"Apple Homepod mini",
+                                 category:"Cables & Docks",
+                                 price:499,
+                                 color:"Black",
+                                 path:"https://i.ibb.co/j9Xp1F4/img18.png",
+                                 brand:"Apple",
+                               best:"false"
+                             })
+                 
+                             const  im21=new image(
+                 
+                 
+                                            {
+                                            
+                                                item:"iphone-lightning-dock",
+                                                category:"Cables & Docks",
+                                                price:49,
+                                                color:"pink",
+                                                path:"https://i.ibb.co/ScRMJ32/iphone-lightning-dock.jpg",
+                                                brand:"Apple",
+                                                best:"false",
+                                                oldprice:19
+                                           }) 
+
+
+
+
+                          
+image.insertMany([im1,im2,im3,im4,im5,im6,im7,im8,im9,im10,im12,im13,im14,im15,im16,im17,im18,im19,im20,im21],function(err,result){
+ if(err) throw err;
+ else
+ console.log(result)
+});
+
+
+
+
+
+
+
+
+       
+
+                               
+
+

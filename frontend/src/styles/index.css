@@ -62,13 +62,6 @@ body{
     height: 400px;
     /* position: ; */
 }
-.btn{
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-}
 .seller{
     display: grid;
     position: relative;
@@ -117,15 +110,102 @@ body{
     width: 900px;
     border-color: lightgray;
 }
+.account{
+    margin-left: 1050px;
+    display: flex;
+    width: 200px;
+    height: 25px;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.top{
+    width: 630px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 430px;
+    text-transform: uppercase;
+    margin-right: 380px;
+    margin-top: 10px;
+    justify-content: space-evenly;
+    font-size: 15px;
+    font-weight: bold; 
+}
+#link{
+    text-decoration: none;
+    color:black;
+}
+#linkone{
+    text-decoration: none;
+    color:#1DA1F2;
+    font-weight: bold;
+}
+
+.toptwo{
+    margin-top: 25px;
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    background-color: #F6F7F8;
+    color: blue;
+}
+.image13{
+    position: relative;
+    left: 510px;
+    bottom: 322px;
+    /* height: 480px; */
+
+}
+.topsort{
+    position: relative;
+    top: 40px;
+    left: 205px;
+    width: 270px;
+    height: 321px;
+    background: #F6F7F8 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    opacity: 1;
+    display: grid;
+
+}
+#btn{
+    color: black;
+    background-color: transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+}
+
+#access{
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-right: 21px;
+font: normal normal 600 16px/20px Proxima Nova;
+letter-spacing: 0px;
+color: #22262A;
+opacity: 1;
+}
+
+
+.set{
+    width: 120px;
+    height: 80px;
+}
 
 
 
 
 
-
-
-
-
+#react-paginate-ul {
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  #react-paginate li {
+    display: inline-block;
+  }
 
 
 
@@ -153,6 +233,16 @@ body{
     border-radius: 2%;
 }
 
+#eighti{
+    background-color: #FFFFFF;
+    width: 200px;
+    height: 300px;
+    border: 1px solid lightgray;
+    margin-top: 35px;
+    align-self: center;
+    border-radius: 2%;
+}
+
 
 #eleven{
     margin-left:8px;
@@ -168,6 +258,8 @@ body{
         margin-top: 12px;
         margin-left: 25px;
     }
+
+
 
     #ten{
         text-align: center;
@@ -254,6 +346,14 @@ body{
     position: relative;
     left: 560px;
 }
+.twittera{
+    display: flex;
+    width: 10%;
+    height: 20px;
+    position: relative;
+    left: 560px;
+    bottom: 440px;
+}
 #twit2{
     margin-left: 28px;
 }
@@ -264,12 +364,180 @@ body{
 }
 
 .last{
-    margin-left: 150px;
+    margin-left: 180px;
     margin-right:1rem;
     border-top: 1px solid lightgray;
     margin-top: 30px;
+    padding-top: 30px;
     width: 75%;
-    height: 120px;
+    height: 60px;
+    display: grid;
+    grid-template-rows: repeat(1,40px);
+    grid-template-columns: repeat(6,180px);
+    font-weight: bold;
+    color: black;
     /* background-color: #c00000; */
 }
 
+.lasti{
+    margin-left: 180px;
+    margin-right:1rem;
+    border-top: 1px solid lightgray;
+    margin-top: 30px;
+    padding-top: 30px;
+    width: 75%;
+    height: 60px;
+    display: grid;
+    grid-template-rows: repeat(1,40px);
+    grid-template-columns: repeat(6,180px);
+    font-weight: bold;
+    color: black;
+    position: relative;
+    bottom: 420px;
+    /* background-color: #c00000; */
+}
+.lastone{
+    margin-left: 165px;
+    margin-right:1rem;
+    width: 75%;
+    height: 160px;
+    display: grid;
+    grid-template-rows: repeat(1,40px);
+    grid-template-columns: repeat(6,180px);
+    padding-bottom: 10px;
+}
+
+.lastonee{
+    margin-left: 165px;
+    margin-right:1rem;
+    width: 75%;
+    height: 160px;
+    display: grid;
+    grid-template-rows: repeat(1,40px);
+    grid-template-columns: repeat(6,180px);
+    padding-bottom: 10px;
+    position: relative;
+    bottom: 420px;
+}
+
+
+.self{
+    display: flex;
+    justify-content: space-between;
+}
+
+#size{
+    width: 40px;
+    height: 30px;
+}
+
+.topsort2{
+
+    position: relative;
+     bottom: 280px;
+    left: 205px;
+    width: 270px;
+    height: 171px;
+    background: #F6F7F8 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    opacity: 1;
+    display: grid;
+
+}
+
+.topsort3{
+
+    position: relative;
+     bottom: 480px;
+    left: 505px;
+    width: 870px;
+    height: 38px;
+    background: #F6F7F8 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    opacity: 1;
+    display: grid;
+
+}
+
+.topsort4{
+
+    position: relative;
+     bottom: 450px;
+    left: 505px;
+    width: 870px;
+    height: 38px;
+    background: #F6F7F8 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    opacity: 1;
+    display: grid;
+
+}
+.whole{
+    padding-left: 20px;
+padding-bottom: 20px;
+padding-right: 20px;
+    position: relative;
+    left: 500px;
+    bottom: 450px;
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: 260px 260px 260px ;
+}
+
+
+
+
+
+
+
+
+
+.pagination {
+    margin: 15px auto;
+    display: flex;
+    list-style: none;
+    outline: none;
+  }
+  .pagination > .active > a{
+    background-color: white ;
+    border-color: #47ccde ;
+    color: #fff;
+  }
+  .pagination > li > a{
+    border: 1px solid black ;
+    padding: 5px 10px;
+    outline: none;
+    cursor: pointer;
+  }
+  .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
+    background-color: black;
+    border-color:  black;
+    outline: none ;
+    color: white;
+    /* height: 30px; */
+  }
+  .pagination > li > a, .pagination > li > span{
+    color: black;
+  }
+  .pagination > li:first-child > a, .pagination > li:first-child > span, .pagination > li:last-child > a, .pagination > li:last-child > span{
+    border-radius: unset
+  }
+  .shift{
+      position: relative;
+      bottom: 440px;
+      left: 870px;
+  }
+
+  .shifti{
+    position: relative;
+    bottom: 6px;
+    left: 10px;
+    /* top: 1px;   */
+    display: flex;
+    justify-content: center;
+}
+
+#imagea{
+    position: relative;
+    bottom: 440px;
+}

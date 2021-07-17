@@ -9,6 +9,7 @@ var assert = require('assert');
 const app=express();
 const PORT =3001;
 app.use(cors());
+
 mongoose.connect(url,
     { useNewUrlParser: true , useUnifiedTopology: true },function(err,connection){
     if(err) console.log(err)
@@ -71,19 +72,29 @@ app.get("/services",(request,response)=>{
     })
 })
 
+// app.get("/home",(request,response)=>{
+//     console.log(request.query);
+//     products.find((request.query),(err,result)=>{
+//         if(err) console.log(err)
+//         else{
+//              console.log(result)
+//              response.json(result)          
+//         }
+//     })
+// })
 
 
-app.get("/products",(request,response)=>{
-   
-    
-    products.find((err,result)=>{
-        if(err) console.log(err)
-        else{
-             console.log(result)
-             response.json(result)
-        }
+
+    app.get("/products",(request,response)=>{
+        console.log(request.query.data);
+        products.find((request.query),(err,result)=>{
+            if(err) console.log(err)
+            else{
+                 console.log(result)
+                 response.json(result)          
+            }
+        })
     })
-})
 
 app.get("/home",(request,response)=>{
   
@@ -150,6 +161,17 @@ app.get("/bests",(request,response)=>{
         }
     })
   })
+
+  
+
+ 
+
+  
+  
+  
+
+
+  
 
 app.listen(PORT,()=>{
     console.log("server is running")
