@@ -4,6 +4,7 @@ import axios from 'axios';
 import Home from './home.js'
 import Sell from './sell.js'
 import Accs from './accs.js'
+import Checkout from './checkout.js'
 
 class App extends Component{
   state = {
