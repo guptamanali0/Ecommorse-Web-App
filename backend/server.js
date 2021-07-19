@@ -85,20 +85,33 @@ app.get("/services",(request,response)=>{
 
 
 
-    app.get("/products",(request,response)=>{
-        console.log(request.query.data);
-        products.find((request.query),(err,result)=>{
-            if(err) console.log(err)
-            else{
-                 console.log(result)
-                 response.json(result)          
-            }
-        })
-    })
+    // app.get("/products",(request,response)=>{
+    //     console.log(request.query);
+    //     console.log("Manali")
+    //     products.find((request.query),(err,result)=>{
+    //         if(err) console.log(err)
+    //         else{
+    //             //  console.log(result) 
+    //             //  response.json(result)          
+    //         }
+    //     })
+    // })
 
 app.get("/home",(request,response)=>{
   
     menus.find((err,result)=>{
+        if(err) console.log(err)
+        else{
+             console.log(result)
+             response.json(result)
+        }
+    })
+  })
+
+  
+app.get("/products",(request,response)=>{
+  
+    products.find((err,result)=>{
         if(err) console.log(err)
         else{
              console.log(result)

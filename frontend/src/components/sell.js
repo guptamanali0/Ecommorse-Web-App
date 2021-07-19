@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {BrowserRouter , Route} from 'react-router-dom'
 import axios from 'axios';
 import {Link,NavLink } from 'react-router-dom';
+import { HashRouter } from 'hash-router'
 import './../styles/index.css'
 import image12 from './../images/ishop.png'
 import image2 from './../images/i2.png'
@@ -11,6 +12,7 @@ import image6 from './../images/i6.png'
 import image7 from './../images/i7.jpg'
 import ReactPaginate from 'react-paginate';
 let postData;
+
 class Sell extends Component{
   state={
     menu:[],
@@ -22,7 +24,8 @@ class Sell extends Component{
     currentPage: 0,
     pageCount:5,
    postData:[],
-   readme:[]
+   readme:[],
+   aboutProps:[]
   };
  
   // myFunctionA = () => {
@@ -56,6 +59,7 @@ class Sell extends Component{
   myFunctionA = () => {
     this.setState((state) => (
         {product:state.product1.filter((item) => item.category === "Apple Car")}))
+        console.log(this.state.product)
     console.log("yes")
   }
   
@@ -170,6 +174,7 @@ axios.spread((...responses) => {
            {this.state.menu.map((i)=>(
                <div key={i.id}>
                  <NavLink  id="link"  to="/sell">{i.item}</NavLink>
+                 {/* <button onClick={this.myFunctionD} id="btn">Cases & Films</button> */}
                </div> 
 ))}
  </div>
@@ -183,7 +188,7 @@ axios.spread((...responses) => {
 <div className="topsort">
 <div id="access">ACCESSORIES</div>
 <div className="self">
-<button onClick={this.myFunctionA} id="btn">Apple Car </button>
+  <NavLink activeStyle={{color:"red"}} to="#"><button onClick={this.myFunctionA} id="btn"><span id="anchor">Apple Car</span></button></NavLink>
 <button onClick={this.myFunctionA} id="btn">25</button>
 </div>
 <div className="self">
@@ -220,20 +225,85 @@ axios.spread((...responses) => {
 
 
 <div className="topsort2">
-<div id="access">ACCESSORIES</div>
+<div id="access">PRICES</div>
 <div className="self"></div>
 </div>
 
 <div className="topsort3">
-<div id="access">ACCESSORIES</div>
-{/* <button onClick={this.sortFunction.bind(this,'category')}>Name</button> */}
-{/* <button onClick={this.myFunctionA}>Category </button>
-
-<button onClick={this.myFunctionB}>Category </button>
-
-<button onClick={this.myFunctionC}>Category </button> */}
 <div className="self">
 
+
+
+</div>
+</div>
+
+<div className="topsort7">
+{/* <div className="self"> */}
+<div id="access">COLOR</div>
+<div className="self1">
+  <button onClick={this.myFunctionA} id="btna"></button>
+  <button onClick={this.myFunctionB} id="btnb"></button>
+  <button onClick={this.myFunctionC} id="btnc"></button>
+  <button onClick={this.myFunctionD} id="btnd"></button>
+  <button onClick={this.myFunctionE} id="btne"></button>
+  <button onClick={this.myFunctionF} id="btne"></button>
+{/* </div> */}
+
+
+</div>
+</div>
+
+<div className="topsort5">
+
+<div id="access">BRANDS</div>
+{/* <div className="self"> */}
+<div className="inside">
+  <div className="self">
+  <button onClick={this.myFunctionA} id="btn">Apple</button>
+  <button onClick={this.myFunctionA} id="btn">3</button>
+</div>
+
+<div className="self">
+  <button onClick={this.myFunctionB} id="btn">LG</button>
+  <button onClick={this.myFunctionB} id="btn">3</button>
+</div>
+
+<div className="self">
+  <button onClick={this.myFunctionC} id="btn">Dell</button>
+  <button onClick={this.myFunctionC} id="btn">3</button>
+</div>
+
+<div className="self">
+  <button onClick={this.myFunctionD} id="btn">Samsung</button>
+  <button onClick={this.myFunctionD} id="btn">3</button>
+</div>
+</div>
+{/* <div className="self">
+<button onClick={this.myFunctionB} id="btn">Airport & Wireless</button>
+<button onClick={this.myFunctionB} id="btn">25</button>
+</div>
+
+<div className="self">
+<button onClick={this.myFunctionB} id="btn">Airport & Wireless</button>
+<button onClick={this.myFunctionB} id="btn">25</button>
+</div>
+
+<div className="self">
+<button onClick={this.myFunctionB} id="btn">Airport & Wireless</button>
+<button onClick={this.myFunctionB} id="btn">25</button>
+</div> */}
+</div>
+{/* </div> */}
+
+
+<div className="topsort6">
+<div className="self">
+<div id="access">MORE</div>
+
+{/* <div className="self">
+<button onClick={this.myFunctionB} id="btn">Airport & Wireless</button>
+<button onClick={this.myFunctionB} id="btn">25</button>
+</div> */}
 </div>
 </div>
 
@@ -244,7 +314,18 @@ axios.spread((...responses) => {
     <div id="eight">
        <button id="eleven" className="btn active">Hot</button>
 <div key={i.id}>
-<img src={i.path} id="nine" />
+    
+       <Link to={
+         {
+          //  pathname:"/practicse/manaligupta"
+           pathname:'/practicse/'+i._id,
+          //  search:'?'+i.id,
+            //  hash:'#hash',
+
+         }
+
+}
+><img src={i.path} id="nine" /></Link>
       <p id="ten">{i.item}</p>
 
       
@@ -259,6 +340,8 @@ axios.spread((...responses) => {
 
 </div> 
 ))} 
+
+
 
 </div>
 {/* <h1 className="shift">Manali</h1> */}
@@ -280,7 +363,7 @@ axios.spread((...responses) => {
 
             </div>
             <div>
-  <img src={image5} id="imagea" />
+   <img src={image5} id="imagea" />
 </div> 
 <Link to="/sell">
 <div className="twittera">
@@ -296,17 +379,20 @@ axios.spread((...responses) => {
      <div>My Account</div>
      <div>Useful Links</div>
      <div>Our Offers</div>
-</div>
+</div> 
 
-            <div className="lastonee">
+             <div className="lastonee">
 {this.state.readme.map((i)=>(
                <div key={i.id}> 
-                 <button className="btn">{i.item}</button>
-                 {/* <button onClick={this.handleclick()}>{this.state.flag}?<Store />:null</button> */}
+               <button className="btn">{i.item}</button>
+            {/* <button onClick={this.handleclick()}>{this.state.flag}?<Store />:null</button>  */}
                </div> 
               
 ))}
- </div>
+ </div> 
+
+
+ {/* }>check</Link> */}
 
           
   </>
