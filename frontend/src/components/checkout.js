@@ -17,7 +17,10 @@ class Checkout extends Component{
     count:1,
     product1:1,
     flag:true,
-    price:1
+    price:1,
+    price1:1,
+    sum:0,
+    shoppingfee:150
   }
 }
 
@@ -26,6 +29,7 @@ myFunctionR = () => {
   this.setState((state) => (
       {product:[],
       count:0,
+      price:0,
     flag:false
   }
       ))
@@ -46,27 +50,92 @@ myFunctionS = () => {
   this.setState((state) => (
     
     {count:0,
-   price:localcount+2
+  price:0
 
     }))
   }
 
   else{
     let localcount=this.state.count;
+    let original=this.price
+    if(this.state.price===0){
+      this.state.price=this.state.price1
+    }
     console.log("Manali")
     console.log(this.state.price)
   this.setState((state) => (
     
     {count:localcount+1,
-      price:localcount+2
-      // flag:false
-  //  price:this.state.product.price+2
+      price:this.state.price1*(localcount+1)
     }))
   }
 
       console.log(this.state.count)
   console.log("yes")
 
+}
+
+
+myFunctionT = () => {
+  let localcount=this.state.count;
+  if(this.state.flag==false||localcount<=0){
+    
+    console.log("Manali")
+  this.setState((state) => (
+    
+    {count:0,
+      price:0
+
+    }))
+  }
+
+  else{
+    let anothercount=this.state.count;
+    console.log("Manali")
+    console.log(this.state.price)
+  this.setState((state) => (
+    
+    {count:localcount-1,
+      price:this.state.price1*(anothercount-1),
+    }))
+    console.log("work")
+  }
+
+      console.log(this.state.count)
+  console.log("yes")
+
+}
+
+myFunctionZ = () => {
+  let localcount=this.state.count;
+    
+    console.log("Manali")
+    let x=this.state.price
+    const z=parseInt(x)
+    console.log(typeof(this.state.count))
+    if(this.state.flag==false){
+      let localcount=this.state.count;
+      console.log("Manali")
+    this.setState((state) => (
+      
+      {sum:0
+  
+      }))
+    }
+    else if(this.state.count===0){
+      this.setState({
+        sum:0
+      })
+    }
+    else{
+  this.setState((state) => (
+    
+    {
+
+sum:parseInt(x)+150
+    })
+    )
+  }
 }
 componentDidMount() {
   let one ="http://localhost:3001/home";
@@ -86,13 +155,13 @@ axios.spread((...responses) => {
 
     const newList = responseTwo.filter((item) => item._id === this.props.match.params.username) 
     console.log(responseOne, responseTwo)
-    console.log("")
+    const priceList=this.props.match.params.price
 
     this.setState({
        menu:responseOne,
        product:newList,
-      //  price:this.props.match.params.price
-      //  readme:responseThree,
+       price:priceList,
+       price1:priceList
       })
   })
 )
@@ -101,7 +170,6 @@ axios.spread((...responses) => {
      
      )
      console.log("price")
-    //  console.log(this.price)
      console.log("fetching data")
  
    }
@@ -115,7 +183,6 @@ axios.spread((...responses) => {
            {this.state.menu.map((i)=>(
                <div key={i.id}>
                  <Link  id="link"  to="/sell">{i.item}</Link>
-                 {/* <button onClick={this.myFunctionD} id="btn">Cases & Films</button> */}
                </div> 
 ))}
  </div>
@@ -127,21 +194,29 @@ axios.spread((...responses) => {
 
  {this.state.product.map((i)=>(
        
-        
+       <div id="eight">
+       <button id="eleven" className="btn active">Hot</button>
        <div key={i.id}>
       <img src={i.path} id="nine" />
       <div>{i.price}</div>
           <p id="ten">{i.item}</p>
-          
+          </div>
+               <div className="six">
+                <div id="thirteen">${i.price}</div>
+    <del id="fourteen">200</del>
+  </div>
+
       </div>
       ))}
 
 
 <button onClick={this.myFunctionR}>Close</button>
 <button onClick={this.myFunctionS}>Increase Item</button>
+<button onClick={this.myFunctionT}>Decrease Item</button>
+<button onClick={this.myFunctionZ}>Sum</button>
 <p>{this.state.count}</p>
-{/* <p>{this.state.product1}</p> */}
-<p>{this.state.price}</p>
+<h1>{this.state.price}</h1>
+<h1>{this.state.sum}</h1>
 
 
 </>

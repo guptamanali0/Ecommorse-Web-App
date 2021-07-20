@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {BrowserRouter , Route} from 'react-router-dom'
 import axios from 'axios';
 import {Link,NavLink } from 'react-router-dom';
-import { HashRouter } from 'hash-router'
+// import { HashRouter } from 'hash-router'
 import './../styles/index.css'
 import image12 from './../images/ishop.png'
 import image2 from './../images/i2.png'
@@ -27,34 +27,8 @@ class Sell extends Component{
    readme:[],
    aboutProps:[]
   };
- 
-  // myFunctionA = () => {
 
-  //   axios.get("http://localhost:3001/products")
-    
-  //   .then((response)=>{
-  //     var slice = response.filter((item) => item.category === "Apple Car").slice(this.state.offset, this.state.offset + this.state.perPage)
-
-  //     postData = this.slice.map(i => <React.Fragment>
-  //      <div id="eight">
-  //           <button id="eleven" className="btn active">Hot</button>
-  //            <div key={i.id}>
-  //              <img src={i.path} id="nine" />
-  //             <p id="ten">{i.item}</p>
-  //             </div>
-  //            </div>
-  // </React.Fragment>) 
-  //     this.setState({
-  //      product: response.data,
-  //      product:this.state.product1.filter((item) => item.color === "Cases & Films"),
-  //      postData:this.state.product1.filter((item) => item.color === "Cases & Films")
-  //       })
-  //  })
-  //   .catch((error)=>
-  //     console.log(error)
-  //   )
-  //   console.log("fetching data")
-  // }
+  
 
   myFunctionA = () => {
     this.setState((state) => (
@@ -318,7 +292,7 @@ axios.spread((...responses) => {
        <Link to={
          {
           //  pathname:"/practicse/manaligupta"
-           pathname:'/practicse/'+i._id,
+           pathname:'/practicse/'+i._id+'/'+i.price,
           //  search:'?'+i.id,
             //  hash:'#hash',
 

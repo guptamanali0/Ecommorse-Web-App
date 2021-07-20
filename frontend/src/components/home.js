@@ -1,7 +1,7 @@
 import React, { Component } from 'react'; 
 import axios from 'axios';
 import Carousel from 'react-elastic-carousel'
-import "react-multi-carousel/lib/styles.css";
+// import "react-multi-carousel/lib/styles.css";
 import { Link, NavLink } from 'react-router-dom';
 
 import './../styles/index.css'
@@ -26,6 +26,8 @@ class Home extends Component{
         store:[],
         readme:[]
       }
+
+      
       componentDidMount() {
          let one ="http://localhost:3001/home";
         let two="http://localhost:3001/stores";
@@ -94,7 +96,6 @@ class Home extends Component{
 {this.state.store.map((i)=>(
                <div key={i.id}> 
                  <button className="btn">{i.item}</button>
-                 {/* <button onClick={this.handleclick()}>{this.state.flag}?<Store />:null</button> */}
                </div> 
                
 ))}
@@ -181,7 +182,6 @@ class Home extends Component{
 {this.state.readme.map((i)=>(
                <div key={i.id}> 
                  <button className="btn">{i.item}</button>
-                 {/* <button onClick={this.handleclick()}>{this.state.flag}?<Store />:null</button> */}
                </div> 
               
 ))}
@@ -230,20 +230,3 @@ export default Home
 
 
 
-
-{/* <div id="eight">
-
-  <img src={Logo4} id="nine"/>
-  <p id="ten">Apple Mackbook pro</p>
-  <button className="star">
-  <button id="star1" className="btn btn-white toggle btn-sm">< BsFillStarFill/></button>
-  <button id="star1" className="btn btn-white toggle btn-sm">< BsFillStarFill/></button>
-  <button id="star1" className="btn btn-white toggle btn-sm">< BsFillStarFill/></button>
-  <button id="star1" className="btn btn-white toggle btn-sm">< BsFillStarFill/></button>
-  <button id="star1" className="btn btn-white toggle btn-sm">< BsFillStarFill/></button>
-  </button>
-  <div className="six">
-    <div id="thirteen">$499</div>
-    <del id="fourteen">5599</del>
-  </div>
-</div> */}
