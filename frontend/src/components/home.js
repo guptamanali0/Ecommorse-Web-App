@@ -95,7 +95,7 @@ class Home extends Component{
 <div className="head2">
 {this.state.store.map((i)=>(
                <div key={i.id}> 
-                 <button className="btn">{i.item}</button>
+                 <Link to="/sell" className="btns">{i.item}</Link>
                </div> 
                
 ))}
@@ -107,7 +107,7 @@ class Home extends Component{
 <div className="seller">
 {this.state.best.map((i)=>(
                <div key={i.id}>
-                <button className="btn">{i.item}</button>
+                <Link className="btns" to="/sell">{i.item}</Link>
                </div>
            ))}
           </div>
@@ -117,7 +117,14 @@ class Home extends Component{
             <div id="eight">
               <button id="eleven" className="btn active">Hot</button>
                <div key={i.id}>
-                 <img src={i.path} id="nine" />
+               <Link to={
+         {
+           pathname:'/practicse/'+i._id+'/'+i.price,
+          
+
+         }
+        }>
+                 <img src={i.path} id="nine" /></Link>
                 <p id="ten">{i.item}</p>
 
   <div className="six">
@@ -130,7 +137,7 @@ class Home extends Component{
 
 
  </div>
- <a href="#" id="more">Load More</a>
+ <Link to="/sell" id="more">Load More</Link>
   <div>
   <img src={image2} id="image2" />
 </div> 
@@ -188,13 +195,14 @@ class Home extends Component{
  </div>
 <hr></hr>
 
+<Link to="/sell">
 <div className="account">
   <img src={image10} />
   <img src={image9} />
   <img src={image11} />
   <img src={image8} />
 </div>
-
+</Link>
 
 
 

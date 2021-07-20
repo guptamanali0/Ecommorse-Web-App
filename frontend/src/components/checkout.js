@@ -30,15 +30,14 @@ myFunctionR = () => {
       {product:[],
       count:0,
       price:0,
-    flag:false
+    flag:false,
+    sum:0
   }
       ))
       if(this.count===0){
       console.log("No Item in Todo")
       }
-      console.log(this.state.product)
-      console.log(this.state.count)
-  console.log("yes")
+  window.alert("Your Cart is Empty ")
   console.log(this.state.flag)
 }
 
@@ -50,25 +49,32 @@ myFunctionS = () => {
   this.setState((state) => (
     
     {count:0,
-  price:0
+  price:0,
+  sum:0
 
     }))
   }
 
   else{
     let localcount=this.state.count;
-    let original=this.price
     if(this.state.price===0){
       this.state.price=this.state.price1
+      this.setState((state)=>({
+        sum:0
+        // sum:parseInt(this.state.price)+150
+      }))
     }
     console.log("Manali")
     console.log(this.state.price)
   this.setState((state) => (
     
     {count:localcount+1,
-      price:this.state.price1*(localcount+1)
+      price:this.state.price1*(localcount+1),
+      sum:0
+      
     }))
   }
+  console.log(this.state.sum)
 
       console.log(this.state.count)
   console.log("yes")
@@ -84,7 +90,8 @@ myFunctionT = () => {
   this.setState((state) => (
     
     {count:0,
-      price:0
+      price:0,
+      sum:0
 
     }))
   }
@@ -97,6 +104,10 @@ myFunctionT = () => {
     
     {count:localcount-1,
       price:this.state.price1*(anothercount-1),
+      sum:0
+      
+
+// sum:parseInt(this.state.price)+150
     }))
     console.log("work")
   }
@@ -192,31 +203,78 @@ axios.spread((...responses) => {
 <NavLink activeClassName="active" to="#" id="linkone">Cart </NavLink>
 </div>
 
+<div className="top2">
+  <div>PRODUCT</div>
+  <div>PRICE</div>
+  <div>QTY</div>
+  <div>UNIT PRICE</div>
+</div>
+<hr className="ho"></hr>
+
+
+
+
+ <div>
  {this.state.product.map((i)=>(
        
-       <div id="eight">
-       <button id="eleven" className="btn active">Hot</button>
+       <div id="#eightyt">
+       <button onClick={this.myFunctionR} id="cross">	&#10060;</button>
+       {/* <button id="eleven" className="btn active">Hot</button> */}
        <div key={i.id}>
-      <img src={i.path} id="nine" />
-      <div>{i.price}</div>
-          <p id="ten">{i.item}</p>
-          </div>
-               <div className="six">
-                <div id="thirteen">${i.price}</div>
-    <del id="fourteen">200</del>
-  </div>
+      
+        
 
+
+      <img src={i.path} id="niney" />
+      <div className="twogrid">
+      <p id="pone">{i.item}</p>
+         <h1 id="ptwo">{this.state.price}</h1>
+         <div className="increase">
+           <button onClick={this.myFunctionT} id="po">-</button>
+           <p id="set">{this.state.count}</p>
+           <button onClick={this.myFunctionS} id="po">+</button>
+          </div>
+          <p id="ptwo">{this.props.match.params.price}</p> 
+          </div>
+</div>
       </div>
       ))}
 
-
-<button onClick={this.myFunctionR}>Close</button>
+</div> 
+{/* <button onClick={this.myFunctionR}>Close</button>
 <button onClick={this.myFunctionS}>Increase Item</button>
 <button onClick={this.myFunctionT}>Decrease Item</button>
-<button onClick={this.myFunctionZ}>Sum</button>
+<p>{this.props.match.params.price}</p> 
+
+ <button onClick={this.myFunctionZ}>Sum</button>
 <p>{this.state.count}</p>
 <h1>{this.state.price}</h1>
-<h1>{this.state.sum}</h1>
+<h1>{this.state.sum}</h1>   */}
+
+<div className="coupan">
+  <input placeholder="Voucher Code" id="code" />
+  <button type="button" className="btn btn-primary" placeholder="Voucher Code" id="reedem">Reedem</button>
+</div>
+
+<div>
+  <div className="final">
+    <div id="finalone">Subtotal</div>
+  <div id="finaltwo">{this.state.price}</div>
+
+  <div id="finalone">Shopping Fee</div>
+  <div id="finaltwo">150</div>
+
+  <div id="finalone">Coupan</div>
+  <div id="finaltwo">No</div>
+
+  <div id="total">Total</div>
+  <div id="totals">{this.state.sum}</div>
+
+  <div className="coupan">
+  <button type="button" className="btn btn-primary"  id="reedemone" onClick={this.myFunctionZ}>Check out</button>
+</div> 
+</div>
+</div>
 
 
 </>

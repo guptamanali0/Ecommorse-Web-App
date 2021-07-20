@@ -14,6 +14,7 @@
     "hash-router": "^0.4.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-dropdown": "^1.9.2",
     "react-elastic-carousel": "^0.11.5",
     "react-js-pagination": "^3.0.3",
     "react-multi-carousel": "^2.6.3",
@@ -24,6 +25,7 @@
     "react-scripts": "4.0.3",
     "react-scroll-horizontal": "^1.6.6",
     "react-whirligig": "^6.6.15",
+    "reactstrap": "^8.9.0",
     "styled-components": "^5.3.0",
     "web-vitals": "^1.1.2"
   },
