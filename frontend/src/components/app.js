@@ -3,11 +3,9 @@ import {BrowserRouter , Route} from 'react-router-dom'
 import axios from 'axios';
 import Home from './home.js'
 import Sell from './sell.js'
-import Accs from './accs.js'
-import Checkout from './checkout.js'
 import { useParams } from "react-router-dom";
 import {useLocation} from "react-router-dom";
-import Practicse from './practicse.js';
+import Checkout from './checkout.js';
 
 class App extends Component{
   state = {
@@ -22,7 +20,7 @@ class App extends Component{
         <BrowserRouter>
    <Route path="/" component={() => <Home />} exact />
    <Route path="/sell" component={() => <Sell courselist={this.state.courselist}/>} exact />
-   <Route path="/practicse/:username" component={Practicse} />
+   <Route path="/practicse/:username/:price" component={Checkout} />
    </BrowserRouter>
   </>
       )
