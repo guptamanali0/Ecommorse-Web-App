@@ -52,39 +52,26 @@ class Sell extends Component{
         {product:state.product1.filter((item) => item.category === "Apple Car"),
         count2:this.state.product.length
       }))
-      console.log("Manali")
-      console.log(this.state.count2)
-      // this.myFunction()
-        console.log(this.state.product)
-        console.log(this.state.product.length)
-    console.log("yes")
   }
   
 myFunctionB = () => {
   this.setState((state) => (
       {product:state.product1.filter((item) => item.category === "Airport & Wireless")
       }))
-      // this.myFunction()
-  console.log("yes")
-  console.log(this.state.count2)
 }
 
 myFunctionC = () => {
   this.setState((state) => (
       {product:state.product1.filter((item) => item.category === "Cables & Docks")
       }))
-      // this.myFunction()
-  console.log("yes")
-  console.log(this.state.count2)
+
 }
 
 myFunctionD = () => {
   this.setState((state) => (
       {product:state.product1.filter((item) => item.category === "Cases & Films"),
     }))
-      // this.myFunction()
-  console.log("yes")
-  console.log(this.state.count2)
+
 }
 
 myFunctionE = () => {
@@ -93,35 +80,24 @@ myFunctionE = () => {
       {
         product:state.product1.filter((item) => item.category === "Charging Devices")
     }))
-    // this.myFunction()
-      console.log(this.state.count2)
-  console.log("yes")
-  console.log(this.state.count2)
 }
 
 myFunctionF = () => {
   this.setState((state) => (
       {product:state.product1.filter((item) => item.category === "Connected Devices")
     }))
-    // this.myFunction()
-  console.log("yes")
-  console.log(this.state.count2)
 }
 
 myFunctionG = () => {
   this.setState((state) => (
       {product:state.product1.filter((item) => item.category === "Headphones")
       }))
-      // this.myFunction()
-  console.log("yes")
-  console.log(this.state.count2)
 }
 
 
 
 
 handleChange=(event)=> {
-  console.log(event.target.value)
   this.setState((state) => (
     {
       value: event.target.value
@@ -139,7 +115,6 @@ handleChange=(event)=> {
 
 
 myFunctionX=()=>{
-  console.log("jnves")
   const {value}=this.state
   const {product} = this.state
   let newpost = product.reverse()
@@ -147,10 +122,8 @@ myFunctionX=()=>{
       {
          product:newpost.sort((a,b)=>a.item.localeCompare(b.item))
       }))
-      console.log(this.state.count2)
 }
 myFunctionY=()=>{
-  console.log("jnves")
   const {value}=this.state
   const {product} = this.state
   let newpost = product.reverse()
@@ -158,7 +131,6 @@ myFunctionY=()=>{
       {
         product:newpost.sort((a,b)=>a.price > b.price ? 1:-1)
       }))
-      console.log(this.state.count2)
 }
 
 
@@ -183,9 +155,6 @@ axios.spread((...responses) => {
     const responseThree = responses[2].data;
     var slice = responseTwo.slice(this.state.offset, this.state.offset + this.state.perPage)
 
-    console.log(responseOne, responseTwo)
-    console.log(responseOne.length);
-    console.log(responseTwo.length);
 
     this.setState({
       pageCount: Math.ceil(responseTwo.length / this.state.perPage),
@@ -196,14 +165,12 @@ axios.spread((...responses) => {
        count2:responseTwo.length,
        postData
       })
-      // this.myFunction()
   })
 )
      .catch((error)=>
        console.log(error+"Wrong")    
      
      )
-     console.log("fetching data")
  
    }
    
@@ -297,7 +264,10 @@ axios.spread((...responses) => {
 <div className="topsort3">
 <div className="self">
 
-<div id="it">{this.state.product.length}Items</div>
+<div id="it">
+  <div id="yes">{this.state.product.length}</div>
+  <div>Items</div>
+  </div>
 <label className="index">
 <div id="by">Sort By</div>
           <select id="lang" onChange={this.handleChange} value={this.state.value}>

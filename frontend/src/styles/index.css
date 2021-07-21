@@ -276,15 +276,17 @@
     }
 
     #lang{
-        margin-left: 40px;
+        margin-left: 20px;
         border: none;
         outline: none;
     }
 
     #it{
+        width: 120px;
+        display: flex;
         margin-left: 25px;
         align-self: center;
-        word-spacing: 10px;
+        justify-content: space-between;
     }
     #star1{
         width: 20px;
@@ -535,9 +537,12 @@
         display: flex;
         justify-content: space-between
     }
+    #yes{
+        margin-right: 20px;
+    }
 #by{
     width: 80px;
-    margin-left: 40px;
+    margin-left: 30px;
     align-self: center;
 }
 
@@ -591,7 +596,7 @@
         border-radius: 4px;
         opacity: 1;
         display: grid;
-        grid-template-columns: repeat(6,20px);
+        grid-template-columns: 10px 20px 20px ;
         font-family: proxima Nova;
         font-size: 18px;
         color: #22262A;

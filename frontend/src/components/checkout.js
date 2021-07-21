@@ -86,8 +86,6 @@ myFunctionT = () => {
 
   else{
     let anothercount=this.state.count;
-    console.log("Manali")
-    onsole.log(this.state.price)c
   this.setState((state) => (
     
     {count:localcount-1,
