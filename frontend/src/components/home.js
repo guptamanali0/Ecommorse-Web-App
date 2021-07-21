@@ -1,7 +1,6 @@
 import React, { Component } from 'react'; 
 import axios from 'axios';
 import Carousel from 'react-elastic-carousel'
-// import "react-multi-carousel/lib/styles.css";
 import { Link, NavLink } from 'react-router-dom';
 
 import './../styles/index.css'
@@ -18,6 +17,7 @@ import image10 from './../images/i10.png'
 import image11 from './../images/i11.png'
 import image12 from './../images/ishop.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import image20 from './../images/star.png'
 class Home extends Component{
     state={
         menu:[],
@@ -75,7 +75,7 @@ class Home extends Component{
            
       
   <div className="one"><img src={image12}/></div>
-<div className="head1">
+<div className="top">
       {this.state.menu.map((i)=>(
           <div key={i.id}>
                  <NavLink  id="link"  to="/sell">{i.item}</NavLink>
@@ -126,10 +126,12 @@ class Home extends Component{
         }>
                  <img src={i.path} id="nine" /></Link>
                 <p id="ten">{i.item}</p>
+  <img src={image20} id="left"/>
 
   <div className="six">
                 <div id="thirteen">${i.price}</div>
-    <del id="fourteen">{i.oldprice}</del>
+                <del id="fourteen">499</del>
+    <del>{i.oldprice}</del>
   </div>
                 </div>
                </div>

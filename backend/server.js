@@ -3,7 +3,6 @@ const url="mongodb://127.0.0.1:27017/Ecommercedbs";
 const express = require('express');
 const { request } = require('http');
 var mongo = require('mongodb');
-//const { assert } = require('console');
 let cors = require("cors");
 var assert = require('assert');
 const app=express();

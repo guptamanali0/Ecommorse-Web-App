@@ -4,6 +4,9 @@ import axios from 'axios';
 import {Link,NavLink } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider'
+import { InputLabel } from '@material-ui/core';
+import image20 from './../images/star.png'
+
 // import { HashRouter } from 'hash-router'
 import './../styles/index.css'
 import image12 from './../images/ishop.png'
@@ -37,82 +40,85 @@ class Sell extends Component{
 
   };
 
-  myFunctionA = () => {
-    const {product1} = this.state
-    let newpost = product1.reverse()
-    this.setState((state) => (
-        {
-          // product:state.product1.filter((item) => item.category === "Apple Car")}))
-          // product:newpost.sort((a,b)=>a.item.localeCompare(b.item))  
-          product:newpost.sort((a,b)=>a.price-b.price)
-        }))
-        console.log(this.state.product)
-    console.log("yes")
-  }
+  
+
+
+
   
 
   myFunctionA = () => {
+   
     this.setState((state) => (
-        {product:state.product1.filter((item) => item.category === "Apple Car")}))
+        {product:state.product1.filter((item) => item.category === "Apple Car"),
+        count2:this.state.product.length
+      }))
+      console.log("Manali")
+      console.log(this.state.count2)
+      // this.myFunction()
         console.log(this.state.product)
+        console.log(this.state.product.length)
     console.log("yes")
   }
   
 myFunctionB = () => {
   this.setState((state) => (
-      {product:state.product1.filter((item) => item.category === "Airport & Wireless")}))
+      {product:state.product1.filter((item) => item.category === "Airport & Wireless")
+      }))
+      // this.myFunction()
   console.log("yes")
+  console.log(this.state.count2)
 }
 
 myFunctionC = () => {
   this.setState((state) => (
-      {product:state.product1.filter((item) => item.category === "Cables & Docks")}))
+      {product:state.product1.filter((item) => item.category === "Cables & Docks")
+      }))
+      // this.myFunction()
   console.log("yes")
+  console.log(this.state.count2)
 }
 
 myFunctionD = () => {
   this.setState((state) => (
-      {product:state.product1.filter((item) => item.category === "Cases & Films")}))
+      {product:state.product1.filter((item) => item.category === "Cases & Films"),
+    }))
+      // this.myFunction()
   console.log("yes")
+  console.log(this.state.count2)
 }
 
 myFunctionE = () => {
+  
   this.setState((state) => (
-      {product:state.product1.filter((item) => item.category === "Charging Devices")}))
+      {
+        product:state.product1.filter((item) => item.category === "Charging Devices")
+    }))
+    // this.myFunction()
+      console.log(this.state.count2)
   console.log("yes")
+  console.log(this.state.count2)
 }
 
 myFunctionF = () => {
   this.setState((state) => (
-      {product:state.product1.filter((item) => item.category === "Connected Devices")}))
+      {product:state.product1.filter((item) => item.category === "Connected Devices")
+    }))
+    // this.myFunction()
   console.log("yes")
+  console.log(this.state.count2)
 }
 
 myFunctionG = () => {
   this.setState((state) => (
-      {product:state.product1.filter((item) => item.category === "Headphones")}))
-  console.log("yes")
-}
-
-myFunctionM = () => {
-  this.setState((state) => (
-        {names:this.state.names.sort()
-        }))
-  console.log(this.state.names)
-}
-
-myFunctionK = () => {
-  const {product1} = this.state
-  // let newpost = product1.reverse()
-  let newppost=[]
-  this.setState((state) => (
-      {
-        // product:state.product1.filter((item) => item.category === "Apple Car")}))
-        product:this.newpost.sort((a,b)=>a.item> b.item)
+      {product:state.product1.filter((item) => item.category === "Headphones")
       }))
-      console.log(this.state.product)
+      // this.myFunction()
   console.log("yes")
+  console.log(this.state.count2)
 }
+
+
+
 
 handleChange=(event)=> {
   console.log(event.target.value)
@@ -120,53 +126,44 @@ handleChange=(event)=> {
     {
       value: event.target.value
 
+
     }
     ))
-    if(event.target.value==="name")
+    if(event.target.value==="name"){
   this.myFunctionX();
-  else
+    }
+  else{
   this.myFunctionY();
 }
+}
+
+
 myFunctionX=()=>{
   console.log("jnves")
   const {value}=this.state
-  const {product1} = this.state
-  let newpost = product1.reverse()
+  const {product} = this.state
+  let newpost = product.reverse()
     this.setState((state) => (
       {
-        // product:state.product1.filter((item) => item.category === "Apple Car")}))
-         product:newpost.sort((a,b)=>a.item.localeCompare(b.item))  
-        //product:newpost.sort((a,b)=>a.price > b.price ? 1:-1)
+         product:newpost.sort((a,b)=>a.item.localeCompare(b.item))
       }))
-  
+      console.log(this.state.count2)
 }
 myFunctionY=()=>{
   console.log("jnves")
   const {value}=this.state
-  const {product1} = this.state
-  let newpost = product1.reverse()
+  const {product} = this.state
+  let newpost = product.reverse()
     this.setState((state) => (
       {
-        // product:state.product1.filter((item) => item.category === "Apple Car")}))
-         //product:newpost.sort((a,b)=>a.item.localeCompare(b.item))  
         product:newpost.sort((a,b)=>a.price > b.price ? 1:-1)
       }))
-  
+      console.log(this.state.count2)
 }
 
 
-// myFunctionI = (sortValue) => {
-//   this.setState((prevState) => (
-//     { products: this.state.product1.sortBy(prevState.products, ['sortValue']) },
-//   console.log("yes")))
-// }
 
 
-// sortFunction(sortValue, event) {
-//   alert(sortValue);
-//   this.setState({sortValue: sortValue});
-//   this.myFunctionI(sortValue);
-// }
 
 
 receivedData() {
@@ -196,10 +193,10 @@ axios.spread((...responses) => {
        product1:responseTwo,
        product:responseTwo,
        readme:responseThree,
-       count1:responseOne.length,
        count2:responseTwo.length,
        postData
       })
+      // this.myFunction()
   })
 )
      .catch((error)=>
@@ -233,8 +230,7 @@ axios.spread((...responses) => {
            <div className="top">
            {this.state.menu.map((i)=>(
                <div key={i.id}>
-                 <NavLink  id="link"  to="/sell">{i.item}</NavLink>
-                 {/* <button onClick={this.myFunctionD} id="btn">Cases & Films</button> */}
+                 <NavLink  id="link"  to="/">{i.item}</NavLink>
                </div> 
 ))}
  </div>
@@ -287,35 +283,37 @@ axios.spread((...responses) => {
 <div className="topsort2">
 <div id="access">PRICES</div>
 <div className="self"></div>
-<Typography id="range-slider" gutterBottom>
+ <Typography id="range-slider" gutterBottom>
   Price
 </Typography>
-<Slider defaultValue={20}
+ <Slider defaultValue={20}  onClick={this.myFunctionA} defaultValue={45} onClick={this.myFunctionG}
   valueLabelDisplay="auto"
   aria-labelledby="range-slider"
-/>
+/>  
+
+
 </div>
 
 <div className="topsort3">
 <div className="self">
 
-<div>{this.state.count2}Items</div>
-<div>Sort By</div>
+<div id="it">{this.state.product.length}Items</div>
 <label className="index">
-          {/* Pick your favorite flavor: */}
+<div id="by">Sort By</div>
           <select id="lang" onChange={this.handleChange} value={this.state.value}>
             <option value="name" >Name</option>
             <option value="price" >price</option>
           </select>
+         
         </label>
 
 
 
 </div>
+
 </div>
 
 <div className="topsort7">
-{/* <div className="self"> */}
 <div id="access">COLOR</div>
 <div className="self1">
   <button onClick={this.myFunctionA} id="btna"></button>
@@ -324,7 +322,6 @@ axios.spread((...responses) => {
   <button onClick={this.myFunctionD} id="btnd"></button>
   <button onClick={this.myFunctionE} id="btne"></button>
   <button onClick={this.myFunctionF} id="btne"></button>
-{/* </div> */}
 
 
 </div>
@@ -333,7 +330,6 @@ axios.spread((...responses) => {
 <div className="topsort5">
 
 <div id="access">BRANDS</div>
-{/* <div className="self"> */}
 <div className="inside">
   <div className="self">
   <button onClick={this.myFunctionA} id="btn">Apple</button>
@@ -355,30 +351,14 @@ axios.spread((...responses) => {
   <button onClick={this.myFunctionD} id="btn">3</button>
 </div>
 </div>
-{/* <div className="self">
-<button onClick={this.myFunctionB} id="btn">Airport & Wireless</button>
-<button onClick={this.myFunctionB} id="btn">25</button>
+
 </div>
-<div className="self">
-<button onClick={this.myFunctionB} id="btn">Airport & Wireless</button>
-<button onClick={this.myFunctionB} id="btn">25</button>
-</div>
-<div className="self">
-<button onClick={this.myFunctionB} id="btn">Airport & Wireless</button>
-<button onClick={this.myFunctionB} id="btn">25</button>
-</div> */}
-</div>
-{/* </div> */}
 
 
 <div className="topsort6">
 <div className="self">
 <div id="access">MORE</div>
 
-{/* <div className="self">
-<button onClick={this.myFunctionB} id="btn">Airport & Wireless</button>
-<button onClick={this.myFunctionB} id="btn">25</button>
-</div> */}
 </div>
 </div>
 
@@ -392,10 +372,8 @@ axios.spread((...responses) => {
     
        <Link to={
          {
-          //  pathname:"/practicse/manaligupta"
            pathname:'/practicse/'+i._id+'/'+i.price,
-          //  search:'?'+i.id,
-            //  hash:'#hash',
+         
 
          }
 
@@ -406,20 +384,18 @@ axios.spread((...responses) => {
       
 
              
-               {/* <p id="ten">{i.category}</p> */}
                </div>
+               <img src={image20} id="left"/>
                <div className="six">
                 <div id="thirteen">${i.price}</div>
     <del id="fourteen">200</del>
   </div>
-
 </div> 
 ))} 
 
 
 
 </div>
-{/* <h1 className="shift">Manali</h1> */}
 <div className="topsort4">
 <div className="shifti">
           <ReactPaginate
@@ -460,7 +436,6 @@ axios.spread((...responses) => {
 {this.state.readme.map((i)=>(
                <div key={i.id}> 
                <button className="btn">{i.item}</button>
-            {/* <button onClick={this.handleclick()}>{this.state.flag}?<Store />:null</button>  */}
                </div> 
               
 ))}

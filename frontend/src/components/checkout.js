@@ -4,7 +4,6 @@ import { HashRouter } from 'hash-router'
 import {Link,NavLink } from 'react-router-dom';
 import axios from 'axios';
 import image12 from './../images/ishop.png'
-// import {Link} from 'react-router-dom';
 import './../styles/index.css'
 
 class Checkout extends Component{ 
@@ -61,7 +60,6 @@ myFunctionS = () => {
       this.state.price=this.state.price1
       this.setState((state)=>({
         sum:0
-        // sum:parseInt(this.state.price)+150
       }))
     }
     console.log("Manali")
@@ -106,8 +104,6 @@ myFunctionT = () => {
       price:this.state.price1*(anothercount-1),
       sum:0
       
-
-// sum:parseInt(this.state.price)+150
     }))
     console.log("work")
   }
@@ -241,15 +237,6 @@ axios.spread((...responses) => {
       ))}
 
 </div> 
-{/* <button onClick={this.myFunctionR}>Close</button>
-<button onClick={this.myFunctionS}>Increase Item</button>
-<button onClick={this.myFunctionT}>Decrease Item</button>
-<p>{this.props.match.params.price}</p> 
-
- <button onClick={this.myFunctionZ}>Sum</button>
-<p>{this.state.count}</p>
-<h1>{this.state.price}</h1>
-<h1>{this.state.sum}</h1>   */}
 
 <div className="coupan">
   <input placeholder="Voucher Code" id="code" />
