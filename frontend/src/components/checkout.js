@@ -9,7 +9,6 @@ import './../styles/index.css'
 class Checkout extends Component{ 
   constructor(props){ 
     super(props)
-    console.log(props)
   this.state={
     product:[],
     menu:[],
@@ -24,7 +23,6 @@ class Checkout extends Component{
 }
 
 myFunctionR = () => {
-  console.log(this.flag)
   this.setState((state) => (
       {product:[],
       count:0,
@@ -37,14 +35,12 @@ myFunctionR = () => {
       console.log("No Item in Todo")
       }
   window.alert("Your Cart is Empty ")
-  console.log(this.state.flag)
 }
 
 myFunctionS = () => {
   
   if(this.state.flag==false){
     let localcount=this.state.count;
-    console.log("Manali")
   this.setState((state) => (
     
     {count:0,
@@ -62,8 +58,6 @@ myFunctionS = () => {
         sum:0
       }))
     }
-    console.log("Manali")
-    console.log(this.state.price)
   this.setState((state) => (
     
     {count:localcount+1,
@@ -72,10 +66,7 @@ myFunctionS = () => {
       
     }))
   }
-  console.log(this.state.sum)
 
-      console.log(this.state.count)
-  console.log("yes")
 
 }
 
@@ -83,8 +74,7 @@ myFunctionS = () => {
 myFunctionT = () => {
   let localcount=this.state.count;
   if(this.state.flag==false||localcount<=0){
-    
-    console.log("Manali")
+  
   this.setState((state) => (
     
     {count:0,
@@ -97,7 +87,7 @@ myFunctionT = () => {
   else{
     let anothercount=this.state.count;
     console.log("Manali")
-    console.log(this.state.price)
+    onsole.log(this.state.price)c
   this.setState((state) => (
     
     {count:localcount-1,
@@ -161,7 +151,6 @@ axios.spread((...responses) => {
     const responseThree = responses[2].data;
 
     const newList = responseTwo.filter((item) => item._id === this.props.match.params.username) 
-    console.log(responseOne, responseTwo)
     const priceList=this.props.match.params.price
 
     this.setState({
@@ -176,8 +165,6 @@ axios.spread((...responses) => {
        console.log(error+"Wrong")    
      
      )
-     console.log("price")
-     console.log("fetching data")
  
    }
 
