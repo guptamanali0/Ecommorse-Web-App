@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import {BrowserRouter , Route} from 'react-router-dom'
 import axios from 'axios';
 import {Link,NavLink } from 'react-router-dom';
+import Typography from '@material-ui/core/Typography';
+import Slider from '@material-ui/core/Slider'
 // import { HashRouter } from 'hash-router'
 import './../styles/index.css'
 import image12 from './../images/ishop.png'
@@ -196,7 +198,6 @@ axios.spread((...responses) => {
        readme:responseThree,
        count1:responseOne.length,
        count2:responseTwo.length,
-      //  product:this.product1.sort((a, b) => (a.item > b.item) ? 1 : -1),
        postData
       })
   })
@@ -286,6 +287,13 @@ axios.spread((...responses) => {
 <div className="topsort2">
 <div id="access">PRICES</div>
 <div className="self"></div>
+<Typography id="range-slider" gutterBottom>
+  Price
+</Typography>
+<Slider defaultValue={20}
+  valueLabelDisplay="auto"
+  aria-labelledby="range-slider"
+/>
 </div>
 
 <div className="topsort3">
