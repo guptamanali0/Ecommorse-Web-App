@@ -8,9 +8,6 @@ import {useLocation} from "react-router-dom";
 import Checkout from './checkout.js';
 
 class App extends Component{
-  state = {
-    courselist:[]
-  }
 
     
 
@@ -19,7 +16,7 @@ class App extends Component{
         <>
         <BrowserRouter>
    <Route path="/" component={() => <Home />} exact />
-   <Route path="/sell" component={() => <Sell courselist={this.state.courselist}/>} exact />
+   <Route path="/sell" component={() => <Sell/>} exact />
    <Route path="/practicse/:username/:price" component={Checkout} />
    </BrowserRouter>
   </>
