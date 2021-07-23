@@ -6,8 +6,6 @@ import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider'
 import { InputLabel } from '@material-ui/core';
 import image20 from './../images/star.png'
-
-// import { HashRouter } from 'hash-router'
 import './../styles/index.css'
 import image12 from './../images/ishop.png'
 import image2 from './../images/i2.png'
@@ -31,10 +29,6 @@ class Sell extends Component{
     pageCount:5,
    postData:[],
    readme:[],
-   aboutProps:[],
-   count1:0,
-   count2:0,
-   sort1:[],
    menu:[],
    value:"name"
 
@@ -50,7 +44,6 @@ class Sell extends Component{
    
     this.setState((state) => (
         {product:state.product1.filter((item) => item.category === "Apple Car"),
-        count2:this.state.product.length
       }))
   }
   
@@ -162,7 +155,6 @@ axios.spread((...responses) => {
        product1:responseTwo,
        product:responseTwo,
        readme:responseThree,
-       count2:responseTwo.length,
        postData
       })
   })
@@ -386,7 +378,7 @@ axios.spread((...responses) => {
             <div>
    <img src={image5} id="imagea" />
 </div> 
-<Link to="/sell">
+<Link to="/">
 <div className="twittera">
 <img src={image6}/>
 <img src={image7}  id="twit2"/>

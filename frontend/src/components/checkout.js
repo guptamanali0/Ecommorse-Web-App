@@ -31,9 +31,6 @@ myFunctionR = () => {
     sum:0
   }
       ))
-      if(this.count===0){
-      console.log("No Item in Todo")
-      }
   window.alert("Your Cart is Empty ")
 }
 
@@ -93,24 +90,18 @@ myFunctionT = () => {
       sum:0
       
     }))
-    console.log("work")
   }
 
-      console.log(this.state.count)
-  console.log("yes")
 
 }
 
 myFunctionZ = () => {
   let localcount=this.state.count;
     
-    console.log("Manali")
     let x=this.state.price
     const z=parseInt(x)
-    console.log(typeof(this.state.count))
     if(this.state.flag==false){
       let localcount=this.state.count;
-      console.log("Manali")
     this.setState((state) => (
       
       {sum:0
